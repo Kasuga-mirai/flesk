@@ -3,7 +3,8 @@ import base64
 import io
 from PIL import Image
 
-import markov_model
+
+import pickle
 
 app = Flask(__name__)
 
@@ -43,10 +44,32 @@ def index():
     )
 
 
+with open("model.pkl", "rb") as f:
+    model, starts = pickle.load(f)
+
+def generate_sentence(markov, starts, order=2):
+    import random
+
+    start = random.choice(starts)
+    sentence = list(start)
+
+    while True:
+        key = tuple(sentence[-order:])
+        if key not in markov:
+            break
+
+        next_word = random.choice(markov[key])
+        sentence.append(next_word)
+
+        if len(sentence) > 100:
+            break
+
+    return "未来「" + "".join(sentence) + "」"
+
+@app.route("/markov")
 @app.route("/markov")
 def markov():
-    text = markov_model.generate()
-    return text
+    return generate_sentence(model, starts)
 
 
 @app.route("/upload", methods=["POST"])
