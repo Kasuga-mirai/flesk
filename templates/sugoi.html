@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<body class="sugoi-page"></body>
+
+<title>新・未来ちゃんかわいい大会！！！</title>
+
+<style>
+
+/* 全体 */
+body {
+
+    font-family: sans-serif;
+    margin: 30px;
+
+}
+
+/* ラベル選択 */
+
+.labelFilter {
+
+    margin-bottom: 20px;
+
+}
+
+/* 月ボタン */
+
+.month {
+
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+/* イベント */
+
+.event {
+
+    margin-left: 20px;
+    margin-top: 5px;
+
+}
+
+/* ラベル表示 */
+
+.tag {
+
+    display: inline-block;
+
+    background: #ddd;
+
+    padding: 2px 6px;
+
+    margin-left: 5px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>新・未来ちゃんかわいい大会！！！！！！！</h1>
+毎年恒例！！！ 未来ちゃんかわいい大会！！！！！！！！！！！！ですが，<br>
+今年は！！！！！！！ちょっと変わって，サイトを作ってみました！！！<br>
+未来ちゃんかわいい大会もアップデート！！！今年は<b>年表スタイル</b>です！！！！<br>
+まあ見てもらったらわかります！！！<br>
+これまでの未来ちゃかわいい大会はこちらから！(noteのサイトに飛びます)
+
+<p>
+    <a href="https://note.com/reachwinder/n/n45c3f085a236">
+        2023年上半期
+    </a>
+    <br>
+        <a href="https://note.com/reachwinder/n/nba6460b0c177">
+        2023年下半期
+    </a>
+    <br>
+        <a href="https://note.com/reachwinder/n/n16d705fb1d8a">
+        2024年上半期
+    </a>
+    <br>
+        <a href="https://note.com/reachwinder/n/nb56325dbbd58">
+        2024年下半期
+    </a>
+    <br>
+        <a href="https://note.com/reachwinder/n/ne17ea7807c27">
+        2025年上半期
+    </a>
+    <br>
+        <a href="https://note.com/reachwinder/n/nb14f61a5cc62">
+        2025年下半期
+    </a>
+    <br>
+</p>
+
+
+<button class="top-button" onclick="location.href='/'">
+
+← トップに戻る
+
+</button>
+
+
+<br>
+項目ごとにチェックボックスで絞り込みができますよ～
+<br>
+
+<!-- ラベルチェック -->
+
+<div class="labelFilter">
+
+<label>
+<input type="checkbox"
+value="ミリシタ"
+checked
+onchange="filterEvents()">
+
+ミリシタ
+</label>
+
+<label>
+<input type="checkbox"
+value="ライブ・イベント"
+checked
+onchange="filterEvents()">
+
+ライブ・イベント
+</label>
+
+<label>
+<input type="checkbox"
+value="コラボ"
+checked
+onchange="filterEvents()">
+
+コラボ
+</label>
+
+<label>
+<input type="checkbox"
+value="グッズ"
+checked
+onchange="filterEvents()">
+
+グッズ
+</label>
+
+<label>
+<input type="checkbox"
+value="その他"
+checked
+onchange="filterEvents()">
+
+その他
+</label>
+
+<label>
+<input type="checkbox"
+value="新規描きおろし"
+checked
+onchange="filterEvents()">
+
+新規描きおろし
+</label>
+
+
+
+</div>
+
+<hr>
+
+
+<!-- 月 -->
+
+<div class="month"
+onclick="toggleMonth('jan', this)">
+
+<span class="arrow">▶</span> 1月
+
+</div>
+
+<div id="jan">
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">1/1
+毎年恒例！初詣未来ちゃん<span class="tag">
+ミリシタ
+</span></p>
+
+<br>
+
+<img
+src="static/IMG_5911.PNG"
+class="event-image">
+<br>
+
+
+<div class="resultBox">
+
+大吉な一年にすると豪語する未来ちゃんに新年初泣き
+</div>
+
+</div>
+
+
+
+
+
+<div
+class="event"
+data-tags="グッズ,新規描きおろし">
+
+<p class="nenpyo-text">1/8
+SEASONAL SNAP SHOTちゃ（イースターちゃ）公開！！！
+<span class="tag">グッズ</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<img
+src="static/get.jpg"
+class="event-image">
+
+<br>
+
+<div class="resultBox">
+
+うわーーーーーーーーー！！！！！！！かわいいかわいいかわいいかわいいかわいいーーーーーー！！！！！！！！！！！
+かわいすぎる！！！！！！！！！！！！！！
+<br>
+天使の笑顔すぎる!!!!!!!!!!!!!!!!
+</div>
+
+
+</div>
+
+<div
+class="event"
+data-tags="ライブ・イベント">
+
+<p class="nenpyo-text">1/16
+    未来ちゃん13thライブ全力援走出演決定！！
+<span class="tag">
+ライブ・イベント
+</span></p>
+<br>
+
+<img
+src="static/get (1).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+未来ちゃんと言えば全力アイドル！！どんな公演になるか楽しみ！！
+</div>
+
+
+</div>
+
+<div
+class="event"
+data-tags="ミリシタ,新規描きおろし">
+
+<p class="nenpyo-text">1/16
+    KAWAIIウォーズ実装決定！！
+<span class="tag">
+ミリシタ
+</span>
+<span class="tag">
+新規描きおろし
+</span>
+</p>
+<br>
+
+<img
+src="static/get (2).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+え，，，と，，，，かわいすぎません，，，か？？？？むりです
+なんでこんなにかわいいんですか
+</div>
+
+
+</div>
+
+
+<div
+class="event"
+data-tags="新規描きおろし">
+
+<p class="nenpyo-text">1/16
+    新規描きおろし色紙未来ちゃん
+<span class="tag">
+新規描きおろし
+</span></p>
+<br>
+
+<img
+src="static/get (3).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+未来ちゃんはかわいいなあ
+<br>
+※山崎はるかさんはこの配信体調不良で不在でした......
+</div>
+</div>
+
+<div
+class="event"
+data-tags="グッズ,新規描きおろし">
+
+<p class="nenpyo-text">1/16
+    Sparkle Girl Crush！PUS開催決定！！
+<span class="tag">グッズ</span>
+<span class="tag">新規描きおろし</span></p>
+<br>
+
+<img
+src="static/get (4).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+そ，そんな恰好.......<br>1月16日は未来ちゃんの情報がいっぱい！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="その他,新規描きおろし">
+
+<p class="nenpyo-text">1/27
+    ツアマス第4弾稼働開始！！
+<span class="tag">その他</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<br>
+
+<img
+src="static/0453.webp"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+↑第４弾実装カード<br>
+未来ちゃんの天使の笑顔で救われる命があります
+</div>
+<img
+src="static/0495.webp"
+class="event-image">
+<div class="resultBox">
+↑第４弾実装カード<br>
+ハートちゃ~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="コラボ">
+
+<p class="nenpyo-text">1/30
+    オファマスパネル設置開始！！
+<span class="tag">コラボ</span></p>
+<br>
+
+<img
+src="static/IMG_0005.jpeg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+ちゃんとお仕事してて未来はえらいなあ！！！！！！！！（コトブキヤ秋葉原店）
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">1/31
+    KAWAIIウォーズイベント開始！！
+<span class="tag">ミリシタ</span></p>
+<br>
+
+<img
+src="static/006mak0563_0_b.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+キラキラ目未来ちゃんかわいすぎる!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</div>
+</div>
+
+</div>
+
+<!-- 月 -->
+
+<div class="month"
+onclick="toggleMonth('feb', this)">
+
+<span class="arrow">▶</span> 2月
+
+</div>
+
+<div id="feb">
+
+
+<div
+class="event"
+data-tags="グッズ">
+
+<p class="nenpyo-text">2/6
+    夢色メルヘンワンダーPUS開催！
+<span class="tag">グッズ</span></p>
+<br>
+
+<img
+src="static/IMG_5519.jpeg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+いばら姫!?ちゃかわいい
+</div>
+</div>
+
+
+
+
+<div
+class="event"
+data-tags="グッズ">
+
+<p class="nenpyo-text">2/13
+    ミリオン13thグッズ発売！
+<span class="tag">グッズ</span></p>
+<br>
+
+<img
+src="static/4573685197731_01.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+ペールライト・オーシャンちゃ好き
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">2/14
+    🍫バレンタインデー🍫
+<span class="tag">ミリシタ</span></p>
+<br>
+
+<img
+src="static/IMG_5918.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+未来ちゃんの「はい、どうぞ♪」マジで本当に可愛いからみんなきいてください
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+<!-- 月 -->
+
+<div class="month"
+onclick="toggleMonth('mar', this)">
+
+<span class="arrow">▶</span> 3月
+
+</div>
+
+<div id="mar">
+
+
+<div
+class="event"
+data-tags="ミリシタ,新規描きおろし">
+
+<p class="nenpyo-text">3/5
+    ダウンタウンガールシリーズ　春日未来 実装！！
+<span class="tag">ミリシタ</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<br>
+
+<img
+src="static/014mir0693_1_b.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+あーーーーーーー！！！！！
+！！！！！
+！！！！！！
+！！！！！！！！！！！！！
+！！！！！（限界）
+</div>
+</div>
+
+
+
+
+
+<div
+class="event"
+data-tags="グッズ,新規描きおろし">
+
+<p class="nenpyo-text">3/10
+    ドデカミンコラボ開催！！！
+<span class="tag">グッズ</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<br>
+
+<img
+src="static/p-section04_modal-003.webp"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+かわいすぎ！！！かわいいかわいい！！！！！！いっぱい買いました！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">3/14
+    🍫ホワイトデー🍫
+<span class="tag">ミリシタ</span>
+</p>
+<br>
+
+<img
+src="static/IMG_5920.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+そうだよ！！！！！！！！！！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="グッズ,新規描きおろし">
+
+<p class="nenpyo-text">3/14
+    いちぽむの3人のフィギュア発売決定！！
+<span class="tag">グッズ</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<br>
+
+<img
+src="static/get (5).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+イラストの時点でかわいい！！！！！3人ぜひそろえたいなあ
+</div>
+</div>
+
+<div
+class="event"
+data-tags="グッズ">
+
+<p class="nenpyo-text">3/14
+    未来ちゃんの30MS発売！！
+<span class="tag">グッズ</span>
+</p>
+<br>
+
+<img
+src="static/get (6).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+
+パッケージがかわいすぎる！！！！！！！！！！！！
+</div>
+
+<img
+src="static/HD7JMsgaIAARqBf.jpg"
+class="event-image">
+<div class="resultBox">
+
+本当に可愛いオススメです
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="グッズ">
+
+<p class="nenpyo-text">3/17
+    たぴぬいVol2/3発売決定！
+<span class="tag">グッズ</span>
+
+</p>
+<br>
+
+<img
+src="static/get (7).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+あーーー！！かわいい！！！！一生たぴぬいちゃをかわいがるおしごとしたい
+</div>
+</div>
+
+<div
+class="event"
+data-tags="ライブ・イベント">
+
+<p class="nenpyo-text">3/22
+    "アイ"のキセキR＠DIO 公開録音会～みんなで聴きマス！～
+
+<span class="tag">ライブ・イベント</span>
+
+</p>
+
+
+<div class="resultBox">
+僕は参加していませんが山崎はるかさんが出演なさったようです！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="グッズ,新規描きおろし">
+
+<p class="nenpyo-text">3/27
+    アイドルマスター ミリオンライブ！ オンラインくじ発売決定！！
+<span class="tag">グッズ</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<br>
+
+<img
+src="static/get (9).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+ガーリーな未来ちゃん可愛すぎる！！本当に可愛い！！！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="その他">
+
+<p class="nenpyo-text">3/29
+    愛♡MAX!!!TVがテレビ放送！！
+<span class="tag">その他</span>
+</p>
+<br>
+
+<img
+src="static/HEkhhDWbQAAlFZg.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+走れ！！走れ！！未来へ！！！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="その他,新規描きおろし">
+
+<p class="nenpyo-text">3/30 オファマスCM公開！！
+    
+<span class="tag">その他</span>
+<span class="tag">新規描きおろし</span>
+</p>
+<br>
+
+<img
+src="static/IMG_5241.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+何でも任せてください！みたいな顔してるけど実際どうかわからない未来ちゃかわいくてすき
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+<!-- 月 -->
+
+<div class="month"
+onclick="toggleMonth('apr', this)">
+
+<span class="arrow">▶</span> 4月
+
+</div>
+
+<div id="apr">
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">4/1
+    ミリシタエイプリルフールイベント開催！
+<span class="tag">ミリシタ</span>
+
+</p>
+<br>
+
+<img
+src="static/HEzm_UQboAEt45D.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+勇者ちゃ でっかいサイドテール かわいいなあ
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+class="event"
+data-tags="グッズ">
+
+<p class="nenpyo-text">4/1
+    コトブキヤバースデーシリーズ発売決定！
+<span class="tag">グッズ</span>
+
+</p>
+<br>
+
+<img
+src="static/get (8).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+ハルカナミライちゃ大好き！！
+</div>
+</div>
+
+
+
+<div
+class="event"
+data-tags="ミリシタ,新規描きおろし">
+
+<p class="nenpyo-text">4/2
+    新生活応援ログインボーナス！！
+<span class="tag">ミリシタ</span>
+<span class="tag">新規描きおろし</span>
+
+</p>
+<br>
+
+<img
+src="static/76318c85-7d64-4dd7-a286-edf4f7dcd35a.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+いちぽむ！！！！！かわいい！！！！！！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="ミリシタ,新規描きおろし">
+
+
+<p class="nenpyo-text">4/9
+    素敵なキセキ 春日未来 公開！！！！
+<span class="tag">ミリシタ</span>
+<span class="tag">新規描きおろし</span>
+
+</p>
+<br>
+
+<img
+src="static/HFdp7KRbQAAOmzu.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+幼少期未来ちゃんが可愛すぎる宇ううううううううううう
+ううううううう！！！！！！！！！！！！！
+</div>
+</div>
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+
+<p class="nenpyo-text">4/11
+    素敵なキセキ 春日未来 実装！！！！！！！
+<span class="tag">ミリシタ</span>
+
+</p>
+<br>
+
+<img
+src="static/014mir0704_1.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+素敵なキセキ！！！！！！！！！！！！！未来ちゃああああああ
+</div>
+</div>
+
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+
+<p class="nenpyo-text">4/11
+    素敵なキセキ 春日未来 4コマ！！
+<span class="tag">ミリシタ</span>
+
+</p>
+<br>
+
+<img
+src="static/HFgkBBkbQAIlsax.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+未来ちゃ......泣
+</div>
+</div>
+
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">4/18
+    Stick to my weapon 開催！
+<span class="tag">ミリシタ</span>
+
+</p>
+<br>
+
+<img
+src="static/cd13a271-e65e-44d3-999c-7e77846a7373.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+行こう！！！！！！！！！
+！！！！！！！！！！！！！！！
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">4/19
+    BOT030405 リリースイベント開催！
+<span class="tag">ライブ・イベント</span>
+
+</p>
+<br>
+
+<img
+src="static/HGQ1DAlbIAAlKYZ.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+ぴょんさんが未来ちゃんにボコボコにされてました
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="その他,新規描きおろし">
+
+<p class="nenpyo-text">4/23
+    ツアマス第5弾開始！
+<span class="tag">その他</span>
+<span class="tag">新規描きおろし</span>
+
+</p>
+<br>
+
+<img
+src="static/0577.webp"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+かわいい！！
+</div>
+
+<img
+src="static/0606.webp"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+マンゴーちゃ！！
+</div>
+
+</div>
+
+
+
+<div
+class="event"
+data-tags="その他">
+
+<p class="nenpyo-text">4月
+    ラジオ会館にWS広告の未来ちゃん登場！！
+<span class="tag">その他</span>
+
+</p>
+<br>
+
+<img
+src="static/IMG_9236.jpeg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+撮るのむずい！！！
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+<!-- 月 -->
+
+<div class="month"
+onclick="toggleMonth('mar', this)">
+
+<span class="arrow">▶</span> 5月
+
+</div>
+
+<div id="mar">
+
+
+<div
+class="event"
+data-tags="ライブ・イベント">
+
+<p class="nenpyo-text">5/5
+    ミリオン13th全力援走開催！！
+<span class="tag">ライブ・イベント</span>
+
+</p>
+<br>
+
+<img
+src="static/HHjeGJzbsAAsLiS.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+未来ちゃんのRtFとかジレハとか，そんなん！！
+いいんですか！！！
+</div>
+</div>
+
+
+
+<div
+class="event"
+data-tags="グッズ,新規描きおろし">
+
+<p class="nenpyo-text">5/5
+    全力援走開催グッズ発売決定！！
+<span class="tag">グッズ</span>
+<span class="tag">新規描きおろし</span>
+
+</p>
+<br>
+
+<img
+src="static/4580891510216_01.jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+カワイイ！！！！！！！！
+</div>
+</div>
+
+
+
+<div
+class="event"
+data-tags="ミリシタ">
+
+<p class="nenpyo-text">5/10
+    光のカーテン 春日未来実装！！
+<span class="tag">ミリシタ</span>
+
+</p>
+<br>
+
+<img
+src="static/014mir0713_0_b.png"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+かわいいなあああ（特訓前）
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="ミリシタ,新規描きおろし">
+
+<p class="nenpyo-text">5/10
+    9周年春日未来ちゃん大公開！！！
+<span class="tag">ミリシタ</span>
+<span class="tag">新規描きおろし</span>
+
+</p>
+<br>
+
+<img
+src="static/get (11).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+（あまりの美しさに
+言葉にならない）
+</div>
+</div>
+
+
+<div
+class="event"
+data-tags="グッズ">
+
+<p class="nenpyo-text">5/12
+    サントリーラベル缶発売決定！
+<span class="tag">グッズ</span>
+
+</p>
+<br>
+
+<img
+src="static/get (10).jpg"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+無邪気なレイニーデイズ好き
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- 月 -->
+
+<div class="month"
+onclick="toggleMonth('Jun', this)">
+
+<span class="arrow">▶</span> 6月
+
+</div>
+
+<div id="Jun">
+
+
+<div
+class="event"
+data-tags="その他,新規描きおろし">
+
+<p class="nenpyo-text">6/4
+    ツアーズレア第5弾追加！！
+<span class="tag">その他</span>
+<span class="tag">新規描きおろし</span>
+
+</p>
+<br>
+
+<img
+src="static/0647.webp"
+class="event-image">
+
+
+<br>
+
+<div class="resultBox">
+かわいいなあああ
+</div>
+</div>
+
+
+
+</div>
+
+
+<script>
+
+/* 月折りたたみ */
+
+function toggleMonth(id, element) {
+
+    let m = document.getElementById(id);
+
+    let arrow =
+        element.querySelector(".arrow");
+
+    if (m.style.display === "none" ||
+        m.style.display === "") {
+
+        m.style.display = "block";
+
+        arrow.textContent = "▼";
+
+    } else {
+
+        m.style.display = "none";
+
+        arrow.textContent = "▶";
+    }
+}
+
+/* ラベルフィルター */
+
+function filterEvents() {
+
+    let checkedTags = [];
+
+    document
+    .querySelectorAll(
+        ".labelFilter input:checked"
+    )
+    .forEach(cb => {
+
+        checkedTags.push(cb.value);
+
+    });
+
+    document
+    .querySelectorAll(".event")
+    .forEach(ev => {
+
+        let tags =
+            ev.dataset.tags.split(",");
+
+        let show =
+            tags.some(tag =>
+                checkedTags.includes(tag)
+            );
+
+        ev.style.display =
+            show ? "block" : "none";
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>

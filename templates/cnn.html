@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>でへへCNN</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="/static/style.css">
+
+<!-- Cropper -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css"
+/>
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js">
+</script>
+
+</head>
+
+<body>
+
+<h1>未来ちゃんもがしずななゆり判別機∫๑'ヮ')ƪ</h1>
+
+<h3>
+    このページでは未来ちゃんか静香ちゃんか百合子ちゃんのスクショを入力して
+    判別機くんにそれがだれか判断してもらいます！
+    <br>
+    詳しいことは以下のnoteに記載しています！
+</h3>
+
+
+<input type="file" id="imageInput">
+
+<br><br>
+
+<img id="image">
+
+<br><br>
+
+<button id="cropButton">
+切り抜き！
+</button>
+
+<br>
+
+<img id="preview">
+
+<br>
+
+<button onclick="classifyImage()">
+判別する！
+</button>
+
+<script src="/static/crop.js"></script>
+
+<button class="top-button" onclick="location.href='/'">
+
+← トップに戻る
+
+</button>
+
+
+</body>
+</html>
