@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 import base64
 import io
 from PIL import Image
-
+import sqlite3
 
 import pickle
 
@@ -105,29 +105,43 @@ def markov_page():
 @app.route("/count")
 def count():
 
-    try:
-        with open("counter.txt", "r") as f:
-            n = int(f.read())
+    conn = sqlite3.connect("counter.db")
+    c = conn.cursor()
 
-    except:
-        n = 0
+    # 現在値取得
+    c.execute(
+        "SELECT count FROM counter WHERE id=1"
+    )
 
+    n = c.fetchone()[0]
+
+    # +1
     n += 1
 
-    with open("counter.txt", "w") as f:
-        f.write(str(n))
+    # 更新
+    c.execute(
+        "UPDATE counter SET count=? WHERE id=1",
+        (n,)
+    )
+
+    conn.commit()
+    conn.close()
 
     return str(n)
 
 @app.route("/get_count")
 def get_count():
 
-    try:
-        with open("counter.txt", "r") as f:
-            n = int(f.read())
+    conn = sqlite3.connect("counter.db")
+    c = conn.cursor()
 
-    except:
-        n = 0
+    c.execute(
+        "SELECT count FROM counter WHERE id=1"
+    )
+
+    n = c.fetchone()[0]
+
+    conn.close()
 
     return str(n)
 
