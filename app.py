@@ -102,6 +102,11 @@ def kawaii_page():
 def markov_page():
     return render_template("markov.html")
 
+@app.route("/tell")
+def tell_page():
+    return render_template("tell.html")
+
+
 @app.route("/count")
 def count():
 
