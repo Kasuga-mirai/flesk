@@ -372,3 +372,40 @@ body.sugoi-page {
     margin-top: 10px;
 
 }
+
+#songArea {
+    margin-top: 20px;
+}
+
+/* カード本体 */
+.song-card {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+/* ホバーでちょい浮く */
+.song-card:hover {
+    transform: translateY(-5px);
+}
+
+/* タイトル */
+.song-card h2 {
+    margin: 0 0 10px 0;
+}
+
+/* コメント */
+.song-card p {
+    color: #555;
+}
+
+/* リンク */
+.song-card a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #ea5b76;
+    font-weight: bold;
+}

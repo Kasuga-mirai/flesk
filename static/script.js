@@ -213,3 +213,17 @@ function getsound() {
     });
 
 }
+
+document.getElementById("songArea").innerHTML =
+
+    "<div class='song-card'>" +
+
+        "<h2>" + data.title + "</h2>" +
+
+        "<p>" + data.comment + "</p>" +
+
+        "<a href='" + data.apple + "' target='_blank'>Apple Music</a><br>" +
+        "<a href='" + data.youtube + "' target='_blank'>YouTube</a><br>" +
+        "<a href='" + data.spotify + "' target='_blank'>Spotify</a>" +
+
+    "</div>";
