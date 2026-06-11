@@ -200,7 +200,7 @@ function getsound() {
     .then(res => res.json())
     .then(data => {
 
-document.getElementById("songArea").innerHTML =
+    document.getElementById("songArea").innerHTML =
 
     "<div class='song-card'>" +
 
