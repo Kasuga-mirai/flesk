@@ -26,7 +26,7 @@ function shareOnX() {
 
 
     let shareText =
-        latestText + "\n未来ちゃんかわいい！！2026(URL)";
+        latestText + "\n未来ちゃんかわいいサイト!!\nhttps://www.mirai-cha.link/markoving";
 
     let url =
         "https://twitter.com/intent/tweet?text="
@@ -184,7 +184,7 @@ function shareCountOnX() {
         "みんなで未来ちゃんを " +
         count +
         " 回なでなでしました！\n" +
-        "未来ちゃんかわいい！！2026(URL)";
+        "未来ちゃんかわいいサイト!!\nhttps://www.mirai-cha.link";
 
     let url =
         "https://twitter.com/intent/tweet?text="
