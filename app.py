@@ -98,7 +98,7 @@ def cnn_page():
 def kawaii_page():
     return render_template("sugoi.html")
 
-@app.route("/markov")
+@app.route("/markoving")
 def markov_page():
     return render_template("markov.html")
 
