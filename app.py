@@ -176,7 +176,7 @@ import random
 
 def load_songs():
 
-    with open("songlist.json", "r", encoding="utf-8") as f:
+    with open("songs.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 
