@@ -194,3 +194,22 @@ function shareCountOnX() {
     
 }
 
+function getsound() {
+
+    fetch("/random_song_api")
+    .then(res => res.json())
+    .then(data => {
+
+        document.getElementById("songArea").innerHTML =
+
+            "<h2>" + data.title + "</h2>" +
+
+            "<p>" + data.comment + "</p>" +
+
+            "<a href='" + data.apple + "' target='_blank'>Apple Music</a><br>" +
+            "<a href='" + data.youtube + "' target='_blank'>YouTube</a><br>" +
+            "<a href='" + data.spotify + "' target='_blank'>Spotify</a>";
+
+    });
+
+}

@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect,jsonify
 import base64
 import io
 from PIL import Image
 import sqlite3
 
 import pickle
+import json
 
 app = Flask(__name__)
 
@@ -102,9 +103,9 @@ def kawaii_page():
 def markov_page():
     return render_template("markov.html")
 
-@app.route("/tell")
-def tell_page():
-    return render_template("tell.html")
+@app.route("/song")
+def song_page():
+    return render_template("song.html")
 
 
 @app.route("/count")
@@ -171,7 +172,22 @@ def post_message():
 
 
 
+import random
 
+def load_songs():
+
+    with open("songs.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+@app.route("/random_song_api")
+def random_song_api():
+
+    songs = load_songs()
+
+    song = random.choice(songs)
+
+    return jsonify(song)
 
 
 
