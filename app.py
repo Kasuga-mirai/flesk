@@ -94,11 +94,11 @@ def upload():
 def cnn_page():
     return render_template("cnn.html")
 
-@app.route("/sugoi")
+@app.route("/nenpyo")
 def kawaii_page():
     return render_template("sugoi.html")
 
-@app.route("/markov_page")
+@app.route("/markov")
 def markov_page():
     return render_template("markov.html")
 
