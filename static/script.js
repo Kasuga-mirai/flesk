@@ -194,26 +194,48 @@ function shareCountOnX() {
     
 }
 
+let currentSong = null;
+
 function getsound() {
 
     fetch("/random_song_api")
     .then(res => res.json())
     .then(data => {
 
-    document.getElementById("songArea").innerHTML =
+        currentSong = data;
 
-    "<div class='song-card'>" +
+        document.getElementById("songArea").innerHTML =
+        "<div class='song-card'>" +
 
-        "<h2>" + data.title + "</h2>" +
+            "<img src='" + data.image + "' class='song-image'><br>" +
 
-        "<p>" + data.comment + "</p>" +
+            "<h2>" + data.title + "</h2>" +
 
-        "<a href='" + data.apple + "' target='_blank'>Apple Music</a><br>" +
-        "<a href='" + data.youtube + "' target='_blank'>YouTube</a><br>" +
-        "<a href='" + data.spotify + "' target='_blank'>Spotify</a>" +
+            "<p>" + data.comment + "</p>" +
 
-    "</div>";
+            "<a href='" + data.apple + "' target='_blank'>Apple Music</a><br>" +
+            "<a href='" + data.youtube + "' target='_blank'>YouTube</a><br>" +
+            "<a href='" + data.spotify + "' target='_blank'>Spotify</a>" +
+
+        "</div>";
     });
-
 }
 
+function shareOnXsong() {
+
+    if (!currentSong) {
+        alert("先に曲を選んでください！");
+        return;
+    }
+
+    let shareText =
+        `今日の1曲は「${currentSong.title}」！\n` +
+        "未来ちゃんかわいいサイト!!\n" +
+        "https://www.mirai-cha.link/song";
+
+    let url =
+        "https://twitter.com/intent/tweet?text="
+        + encodeURIComponent(shareText);
+
+    window.open(url, "_blank");
+}

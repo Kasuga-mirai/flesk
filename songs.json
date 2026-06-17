@@ -4,13 +4,71 @@
         "comment": "私の最初のソロ曲です！！",
         "apple": "https://music.apple.com/jp/album/%E7%B4%A0%E6%95%B5%E3%81%AA%E3%82%AD%E3%82%BB%E3%82%AD/1718502548?i=1718502549",
         "youtube": "https://youtu.be/iqKas5YMRPk?si=XgheCHHDVJk7eS-8",
-        "spotify": "https://open.spotify.com/intl-ja/track/27lGHUAV7OJqTdortpAqeT?si=53fe63e38d69418d"
+        "spotify": "https://open.spotify.com/intl-ja/track/27lGHUAV7OJqTdortpAqeT?si=53fe63e38d69418d",
+	"image": "/static/014mir0704_1.png"
     },
+
+
     {
         "title": "未来飛行",
         "comment": "いくよーーーー！！！！",
         "apple": "https://music.apple.com/jp/album/%E6%9C%AA%E6%9D%A5%E9%A3%9B%E8%A1%8C/1718503122?i=1718503369",
+        "youtube": "https://youtu.be/caiYKVL_uTA?si=mOztLxEa3wU4RSA8",
+        "spotify": "https://open.spotify.com/intl-ja/track/7ihZqv40nxJfBRDQiCeiCN?si=7ea1c1ad97ac4ac4",
+	"image": "/static/014mir0264_1.png"
+    },
+
+
+    {
+        "title": "未来系ドリーマー",
+        "comment": "どんなに大変な道でも、絶対絶対大丈夫！",
+        "apple": "https://music.apple.com/jp/album/%E6%9C%AA%E6%9D%A5%E7%B3%BB%E3%83%89%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%BC/1718881055?i=1718881060",
         "youtube": "https://youtu.be/wpCr1PGPaKE?si=xtd7mhSkVx3q4MN0",
-        "spotify": "https://open.spotify.com/intl-ja/track/7ihZqv40nxJfBRDQiCeiCN?si=7ea1c1ad97ac4ac4"
+        "spotify": "https://open.spotify.com/intl-ja/track/0QDLxtn8kQfcfpkAhCnUVI?si=ff39c2b61c2e4e91",
+	"image": "/static/014mir0354_1.png"
+    },
+
+
+    {
+        "title": "しあわせエンドロール",
+        "comment": "全部が思い出です",
+        "apple": "https://music.apple.com/jp/album/%E3%81%97%E3%81%82%E3%82%8F%E3%81%9B%E3%82%A8%E3%83%B3%E3%83%89%E3%83%AD%E3%83%BC%E3%83%AB/1718881235?i=1718881240",
+        "youtube": "https://youtu.be/v8T8Qj-1x-M?si=NYjwWyV-036acQ8K",
+        "spotify": "https://open.spotify.com/intl-ja/track/6iio1iQMiAwI6MZxkYuxKY?si=a16b2db9228f4d35",
+	"image": "/static/LACA-15907_H1.jpg"
+    },
+
+
+    {
+        "title": "PRETTY DREAMER",
+        "comment": "未来行きパスポートの更新は忘れずに",
+        "apple": "https://music.apple.com/jp/album/pretty-dreamer/1718502548?i=17185025540",
+        "youtube": "https://youtu.be/FPQCh1z9Lpo?si=8HsW1pBYB0IODukn",
+        "spotify": "https://open.spotify.com/intl-ja/track/5LI1Nan59ao8rjZAzrKNOb?si=3626904af4a74617",
+	"image": "/static/1543903622001_70lzq5nw.png"
+    },
+
+    {
+        "title": "Growing Storm!",
+        "comment": "未来の風はいつだって 私たちに向かって吹く～",
+        "apple": "https://music.apple.com/jp/album/growing-storm/1718503122?i=1718503123",
+        "youtube": "https://youtu.be/k1YLH-7o7hg?si=WTbR5vU9UD4viqp8",
+        "spotify": "https://open.spotify.com/intl-ja/track/68zjtqSYzDOHCEdLNXOygu?si=35e4cf5f49af4d4e",
+	"image": "/static/Growing Storm 春日未来.jpg"
     }
+
+
+
+
 ]
+
+
+
+
+
+
+
+
+
+
+
