@@ -239,3 +239,37 @@ function shareOnXsong() {
 
     window.open(url, "_blank");
 }
+
+
+
+// function shareEvent(button){
+
+//     const eventDiv = button.closest('.event');
+
+//     // ① タイトル（そのままpから取る）
+//     const title =
+//         eventDiv.querySelector('.nenpyo-text').innerText;
+
+//     // ② URL（自動付与されたid使用）
+//     const pageUrl =
+//         location.origin +
+//         location.pathname +
+//         "#" +
+//         eventDiv.id;
+
+//     const shareText =
+//         title +
+//         "\n\n未来ちゃんかわいいサイト!!\n" +
+//         "#未来ちゃんかわいい大会\n" +
+//         pageUrl;
+
+//     window.open(
+//         "https://twitter.com/intent/tweet?text=" +
+//         encodeURIComponent(shareText),
+//         "_blank"
+//     );
+// }
+
+function shareEvent(button){
+    alert("クリックされた！");
+}
