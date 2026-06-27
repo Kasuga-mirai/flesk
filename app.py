@@ -191,7 +191,9 @@ def random_song_api():
 
 
 
-
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("mogami.html"), 404
 
 
 

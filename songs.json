@@ -5,7 +5,7 @@
         "apple": "https://music.apple.com/jp/album/%E7%B4%A0%E6%95%B5%E3%81%AA%E3%82%AD%E3%82%BB%E3%82%AD/1718502548?i=1718502549",
         "youtube": "https://youtu.be/iqKas5YMRPk?si=XgheCHHDVJk7eS-8",
         "spotify": "https://open.spotify.com/intl-ja/track/27lGHUAV7OJqTdortpAqeT?si=53fe63e38d69418d",
-	"image": "/static/014mir0704_1.png"
+	"image": "/static/songpic/kiseki.png"
     },
 
 
@@ -15,7 +15,7 @@
         "apple": "https://music.apple.com/jp/album/%E6%9C%AA%E6%9D%A5%E9%A3%9B%E8%A1%8C/1718503122?i=1718503369",
         "youtube": "https://youtu.be/caiYKVL_uTA?si=mOztLxEa3wU4RSA8",
         "spotify": "https://open.spotify.com/intl-ja/track/7ihZqv40nxJfBRDQiCeiCN?si=7ea1c1ad97ac4ac4",
-	"image": "/static/014mir0264_1.png"
+	"image": "/static/songpic/fly.png"
     },
 
 
@@ -25,7 +25,7 @@
         "apple": "https://music.apple.com/jp/album/%E6%9C%AA%E6%9D%A5%E7%B3%BB%E3%83%89%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%BC/1718881055?i=1718881060",
         "youtube": "https://youtu.be/wpCr1PGPaKE?si=xtd7mhSkVx3q4MN0",
         "spotify": "https://open.spotify.com/intl-ja/track/0QDLxtn8kQfcfpkAhCnUVI?si=ff39c2b61c2e4e91",
-	"image": "/static/014mir0354_1.png"
+	"image": "/static/songpic/dream.png"
     },
 
 
@@ -35,7 +35,7 @@
         "apple": "https://music.apple.com/jp/album/%E3%81%97%E3%81%82%E3%82%8F%E3%81%9B%E3%82%A8%E3%83%B3%E3%83%89%E3%83%AD%E3%83%BC%E3%83%AB/1718881235?i=1718881240",
         "youtube": "https://youtu.be/v8T8Qj-1x-M?si=NYjwWyV-036acQ8K",
         "spotify": "https://open.spotify.com/intl-ja/track/6iio1iQMiAwI6MZxkYuxKY?si=a16b2db9228f4d35",
-	"image": "/static/LACA-15907_H1.jpg"
+	"image": "/static/songpic/end.jpg"
     },
 
 
@@ -45,7 +45,7 @@
         "apple": "https://music.apple.com/jp/album/pretty-dreamer/1718502548?i=17185025540",
         "youtube": "https://youtu.be/FPQCh1z9Lpo?si=8HsW1pBYB0IODukn",
         "spotify": "https://open.spotify.com/intl-ja/track/5LI1Nan59ao8rjZAzrKNOb?si=3626904af4a74617",
-	"image": "/static/1543903622001_70lzq5nw.png"
+	"image": "/static/songpic/pretty.png"
     },
 
     {
@@ -54,9 +54,108 @@
         "apple": "https://music.apple.com/jp/album/growing-storm/1718503122?i=1718503123",
         "youtube": "https://youtu.be/k1YLH-7o7hg?si=WTbR5vU9UD4viqp8",
         "spotify": "https://open.spotify.com/intl-ja/track/68zjtqSYzDOHCEdLNXOygu?si=35e4cf5f49af4d4e",
-	"image": "/static/Growing Storm 春日未来.jpg"
-    }
+	"image": "/static/songpic/storm.jpg"
+    },
 
+    {
+        "title": "U・N・M・E・I ライブ",
+        "comment": "みりっほー！！",
+        "apple": "https://music.apple.com/jp/album/u-n-m-e-i-%E3%83%A9%E3%82%A4%E3%83%96/1718493350?i=1718493352",
+        "youtube": "https://youtu.be/3c8Uoh1KpM8?si=VYif8ULx1MSovhPi",
+        "spotify": "https://open.spotify.com/intl-ja/track/0l58u1zcnYfLmO93OgW7Ws?si=210291efc1b743b7",
+	"image": "/static/songpic/unmei.png"
+    },
+
+
+    {
+        "title": "ハルカナミライ",
+        "comment": "はるみら!!!",
+        "apple": "https://music.apple.com/jp/album/%E3%83%8F%E3%83%AB%E3%82%AB%E3%83%8A%E3%83%9F%E3%83%A9%E3%82%A4/1718502564?i=1718502566",
+        "youtube": "https://youtu.be/TtCk0ghvF90?si=3ijPALCN7FAUllqP",
+        "spotify": "https://open.spotify.com/intl-ja/track/2OsWg610XF7kJeyAMVJ3Mo?si=497671ba0bf243ba",
+	"image": "/static/songpic/harukamirai.png"
+    },
+
+    {
+        "title": "君との明日を願うから",
+        "comment": "他の誰かじゃきっと同じStage 出会えなかったね",
+        "apple": "https://music.apple.com/jp/album/%E5%90%9B%E3%81%A8%E3%81%AE%E6%98%8E%E6%97%A5%E3%82%92%E9%A1%98%E3%81%86%E3%81%8B%E3%82%89/1718493301?i=1718493302",
+        "youtube": "https://youtu.be/Qb89GNYo9Ew?si=wS9VhlDsjOFbILG9",
+        "spotify": "https://open.spotify.com/intl-ja/track/2OsWg610XF7kJeyAMVJ3Mo?si=497671ba0bf243ba",
+	"image": "/static/songpic/kimiasu.jpg"
+    },
+
+    {
+        "title": "メメント？モメント♪ルルルルル☆",
+        "comment": "えー！？私アイドルなんですか！？すごーい♪",
+        "apple": "https://music.apple.com/jp/album/%E3%83%A1%E3%83%A1%E3%83%B3%E3%83%88-%E3%83%A2%E3%83%A1%E3%83%B3%E3%83%88-%E3%83%AB%E3%83%AB%E3%83%AB%E3%83%AB%E3%83%AB/1718881141?i=1718881146",
+        "youtube": "https://youtu.be/-uns7Hxx-Z8?si=ZXEB0ytTzewyJuc_",
+        "spotify": "https://open.spotify.com/intl-ja/track/3lLaR9OBNcMUwZdzWB3g5e?si=9fcbe1260147484a",
+	"image": "/static/songpic/mmr.jpg"
+    },
+
+    {
+        "title": "Princess Be Ambitious!!",
+        "comment": "手を取り舵取りエスコート♡",
+        "apple": "https://music.apple.com/jp/album/princess-be-ambitious/1717732573?i=1717732574",
+        "youtube": "https://youtu.be/h7E5aaGZUR4?si=xd9IM832KTNW1IrY",
+        "spotify": "https://open.spotify.com/intl-ja/track/5ivzD97qVCh5VA97lGGglK?si=1022410c701541e1",
+	"image": "/static/songpic/pba.png"
+    },
+
+    {
+        "title": "Episode. Tiara",
+        "comment": "階のSTAR ELEMENTS!!",
+        "apple": "https://music.apple.com/jp/album/episode-tiara/1717730195?i=1717730196",
+        "youtube": "https://youtu.be/icMFQ75A9Jg?si=ljVhKvuukVEZYxPb",
+        "spotify": "https://open.spotify.com/intl-ja/track/7JHFzISZDJV90Morp85OUC?si=94bb1c8e083f47fb",
+	"image": "/static/songpic/SE.png"
+    },
+
+    {
+        "title": "ギブミーメタファー",
+        "comment": "涙は最高のジュエル",
+        "apple": "https://music.apple.com/jp/album/%E3%82%AE%E3%83%96%E3%83%9F%E3%83%BC%E3%83%A1%E3%82%BF%E3%83%95%E3%82%A1%E3%83%BC/1717730195?i=1717730197",
+        "youtube": "https://youtu.be/w_R87WNNWMc?si=-QNDUuRWiBgnDcRK",
+        "spotify": "https://open.spotify.com/intl-ja/track/4YR7GlMf6qetya8A1xWQfi?si=662f5853aa434d6a",
+	"image": "/static/songpic/GMM.png"
+    },
+
+    {
+        "title": "なんどでも笑おう",
+        "comment": "でへへ～♪",
+        "apple": "https://music.apple.com/jp/album/%E3%81%AA%E3%82%93%E3%81%A9%E3%81%A7%E3%82%82%E7%AC%91%E3%81%8A%E3%81%86-%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96-ver/1718493092?i=1718493094",
+        "youtube": "https://youtu.be/x7QnWNwU7e0?si=1EbR_3uoZjPmvdod",
+        "spotify": "https://open.spotify.com/intl-ja/track/3xWgVy3ij4lTmsglDHC3AA?si=b88a6f74af24449f",
+	"image": "/static/songpic/smile.png"
+    },
+
+    {
+        "title": "POPLINKS TUNE!!!!!",
+        "comment": "さんかくって～♪",
+        "apple": "https://music.apple.com/jp/album/poplinks-tune/1698435362?i=1698435367",
+        "youtube": "https://youtu.be/auVjwiM3NjU?si=qiSHO9MYnbz-pARd",
+        "spotify": "https://open.spotify.com/intl-ja/track/5lsbkCyTPaLHBPaTOZbuGf?si=cc1cf065fdd3401a",
+	"image": "/static/songpic/pop.jpg"
+    },
+
+    {
+        "title": "SESSION!",
+        "comment": "スタマスやりましょう！！",
+        "apple": "https://music.apple.com/jp/album/session/1718493703?i=1718493858",
+        "youtube": "https://youtu.be/eNLdgMromyY?si=_qHfT4ThdE-aVvnx",
+        "spotify": "https://open.spotify.com/intl-ja/track/7wrPBplgfbspTUVGprzGdP?si=e969eff0962a4e4e",
+	"image": "/static/songpic/SS.jpg"
+    },
+
+    {
+        "title": "ABSOLUTE RUN!!!",
+        "comment": "走れ！走れ！未来へ！！",
+        "apple": "https://music.apple.com/jp/album/absolute-run/1717753904?i=1717753906",
+        "youtube": "https://youtu.be/85GmA8ZHif4?si=6Vf7LmGbDGi6N9I8",
+        "spotify": "https://open.spotify.com/intl-ja/track/5kvyKQrL3bq9gViC7ez1SL?si=d41619f2af8f4948",
+	"image": "/static/songpic/run.png"
+    }
 
 
 
