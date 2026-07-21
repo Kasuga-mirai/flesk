@@ -204,20 +204,28 @@ function getsound() {
 
         currentSong = data;
 
-        document.getElementById("songArea").innerHTML =
-        "<div class='song-card'>" +
+            document.getElementById("songArea").innerHTML =
+            "<div class='song-card'>" +
 
-            "<img src='" + data.image + "' class='song-image'><br>" +
+                "<img src='" + data.image + "' class='song-image'><br>" +
 
-            "<h2>" + data.title + "</h2>" +
+                "<h2>" + data.title + "</h2>" +
 
-            "<p>" + data.comment + "</p>" +
+                "<p>" + data.comment + "</p>" +
 
-            "<a href='" + data.apple + "' target='_blank'>Apple Music</a><br>" +
-            "<a href='" + data.youtube + "' target='_blank'>YouTube</a><br>" +
-            "<a href='" + data.spotify + "' target='_blank'>Spotify</a>" +
+                (data.apple
+                    ? "<a href='" + data.apple + "' target='_blank'>Apple Music</a><br>"
+                    : "Apple Music：配信していません!<br>") +
 
-        "</div>";
+                (data.youtube
+                    ? "<a href='" + data.youtube + "' target='_blank'>YouTube</a><br>"
+                    : "YouTube：配信していません!<br>") +
+
+                (data.spotify
+                    ? "<a href='" + data.spotify + "' target='_blank'>Spotify</a>"
+                    : "Spotify：配信していません!") +
+
+            "</div>";
     });
 }
 
