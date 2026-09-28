@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta property="og:title" content="写真投稿">
+<meta property="og:image" content="https://www.mirai-cha.link/static/name.jpg">
+
+
+<title>投稿フォーム!!</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<style>
+    .upload-container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .upload-section {
+        margin-bottom: 25px;
+    }
+
+    .upload-section h3 {
+        margin-bottom: 10px;
+    }
+
+
+    /* ラジオボタンのグループ */
+    .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* 選択肢1個分 */
+    .radio-group label {
+        display: inline-block;
+        padding: 12px 20px;
+
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid #ddd;
+        border-radius: 12px;
+
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    /* マウスを乗せたとき */
+    .radio-group label:hover {
+        transform: translateY(-2px);
+        border-color: #ff9fc4;
+    }
+
+    /* A */
+    .radio-group label:has(input[value="A"]:checked) {
+        background: #ffaebd;
+        border-color: #949494;
+        color: #ea5b76;
+    }
+
+    /* B */
+    .radio-group label:has(input[value="B"]:checked) {
+        background: #c0dcff;
+        border-color: #949494;
+        color: #6495cf;
+    }
+
+    /* C */
+    .radio-group label:has(input[value="C"]:checked) {
+        background: #ffefbc;
+        border-color: #949494;
+        color: #ffc918;
+    }
+
+    .radio-group label:has(input[value="D"]:checked) {
+        background: #fcf3a2;
+        border-color: #949494;
+        color: #9b8e1b;
+    }
+
+
+    /* ラジオボタン自体 */
+    .radio-group input[type="radio"] {
+        margin-right: 7px;
+    }
+</style>
+
+<style>
+    body {
+        background-image: url("/static/lily.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<h2>
+    アイドルマップ投稿フォーム
+</h2>
+
+<p>
+    投稿された内容は．こちらで確認してから反映するので，
+    しばらくしてからご確認ください！<br>
+</p>
+
+<form>
+
+
+<!-- ========================= -->
+<!-- 画像 -->
+<!-- ========================= -->
+
+<div>
+    <label for="image">
+        写真
+    </label>
+
+    <br>
+
+    <input
+        type="file"
+        id="image"
+        name="image"
+        accept="image/*"
+    >
+</div>
+
+<br>
+
+
+<div class="upload-section">
+    <h3>📍 撮影場所</h3>
+
+    <div class="place-search">
+        <input
+            type="text"
+            id="placeSearch"
+            placeholder="場所の名前を入力してください"
+        >
+
+        <button
+            type="button"
+            class="search-button"
+            onclick="searchPlace()"
+        >
+            🔍 検索
+        </button>
+    </div>
+
+    <div id="placeResults"></div>
+
+    <div id="selectedPlace"></div>
+
+    <div id="map"></div>
+
+    <!-- 実際に選択された場所 -->
+    <input type="hidden" id="place" name="place">
+    <input type="hidden" id="latitude" name="latitude">
+    <input type="hidden" id="longitude" name="longitude">
+</div>
+
+<br>
+
+
+<!-- ========================= -->
+<!-- 最上位階層 -->
+<!-- ========================= -->
+
+<div>
+
+    <label>
+        アイドル
+    </label>
+
+    <br>
+    <div class="radio-group">
+
+
+    <label>
+        <input
+            type="radio"
+            name="character"
+            value="A"
+            onchange="showConditions()"
+        >
+        春日未来
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="character"
+            value="B"
+            onchange="showConditions()"
+        >
+        最上静香
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="character"
+            value="C"
+            onchange="showConditions()"
+        >
+        伊吹翼
+    </label>
+
+
+    <label>
+        <input
+            type="radio"
+            name="character"
+            value="C"
+            onchange="showConditions()"
+        >
+        七尾百合子
+    </label>
+    </div>
+
+
+</div>
+
+
+<!-- ========================= -->
+<!-- 中間階層 -->
+<!-- ========================= -->
+
+<div class="resultBox">
+<div
+    id="conditionArea"
+    style="display:none; margin-top:0px;"
+>
+
+    <label>
+        種類
+    </label>
+
+    <br>
+    
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="X"
+            onchange="showNumbers()"
+        >
+        グラビアスタジオ
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="Y"
+            onchange="showNumbers()"
+        >
+        アクスタ
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="Z"
+            onchange="showNumbers()"
+        >
+        ギフぬい
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="ZA"
+            onchange="showNumbers()"
+        >
+        ミニぬい
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="ZB"
+            onchange="showNumbers()"
+        >
+        ちびぐるみ
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="ZC"
+            onchange="showNumbers()"
+        >
+        たぴぬい
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="condition"
+            value="ZD"
+            onchange="showNumbers()"
+        >
+        その他
+    </label>
+
+
+
+
+</div>
+</div>
+
+
+<!-- ========================= -->
+<!-- 最下層 -->
+<!-- ========================= -->
+<div class="resultBox">
+<div
+    id="numberArea"
+    style="display:none; margin-top:0px;"
+>
+
+    <label>
+        コンディション！
+    </label>
+
+    <br>
+
+    <label>
+        <input
+            type="radio"
+            name="number"
+            value="1"
+        >
+        ライブなどアイドル！
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="number"
+            value="2"
+        >
+        風景！
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="number"
+            value="3"
+        >
+        ごはん！
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="number"
+            value="4"
+        >
+        おでかけ中！
+    </label>
+
+    <label>
+        <input
+            type="radio"
+            name="number"
+            value="5"
+        >
+        その他
+    </label>
+
+</div>
+</div>
+
+
+<br>
+
+
+<!-- ========================= -->
+<!-- ひとこと -->
+<!-- ========================= -->
+
+<div>
+
+    <label for="comment">
+        ひとこと
+    </label>
+
+    <br>
+
+    <textarea
+        id="comment"
+        name="comment"
+        rows="4"
+        placeholder="ひとことどうぞ！"
+    ></textarea>
+
+</div>
+
+
+<br>
+
+
+<!-- ========================= -->
+<!-- 投稿ボタン -->
+<!-- ========================= -->
+
+<button
+    type="submit"
+    class="mirai-button"
+>
+    投稿する♪
+</button>
+
+
+</form>
+
+<br><br>
+
+<button
+class="top-button"
+onclick="location.href='/'"
+
+>
+← トップに戻る
+
+
+</button>
+
+<!-- ========================= -->
+
+<!-- JavaScript -->
+
+<!-- ========================= -->
+
+<script>
+
+function showConditions() {
+
+    // X/Y/Zを表示
+    document.getElementById("conditionArea").style.display = "block";
+
+    // 条件をリセット
+    const conditions =
+        document.querySelectorAll(
+            'input[name="condition"]'
+        );
+
+    conditions.forEach(function(condition) {
+        condition.checked = false;
+    });
+
+    // 番号を非表示
+    document.getElementById("numberArea").style.display = "none";
+
+    // 番号をリセット
+    const numbers =
+        document.querySelectorAll(
+            'input[name="number"]'
+        );
+
+    numbers.forEach(function(number) {
+        number.checked = false;
+    });
+}
+
+
+function showNumbers() {
+
+    // 選択された条件があるか確認
+    const selectedCondition =
+        document.querySelector(
+            'input[name="condition"]:checked'
+        );
+
+    if (selectedCondition) {
+
+        // 1～5を表示
+        document.getElementById("numberArea").style.display = "block";
+
+    } else {
+
+        // 条件がなければ非表示
+        document.getElementById("numberArea").style.display = "none";
+
+        // 番号をリセット
+        const numbers =
+            document.querySelectorAll(
+                'input[name="number"]'
+            );
+
+        numbers.forEach(function(number) {
+            number.checked = false;
+        });
+    }
+}
+
+
+
+async function searchPlace() {
+
+    const query = document.getElementById("placeSearch").value.trim();
+
+    if (!query) {
+        alert("場所を入力してください！");
+        return;
+    }
+
+    const resultsArea = document.getElementById("placeResults");
+
+    resultsArea.innerHTML = "🔍 検索中...";
+
+    try {
+
+        const url =
+            "https://nominatim.openstreetmap.org/search" +
+            "?q=" + encodeURIComponent(query) +
+            "&format=jsonv2" +
+            "&limit=5" +
+            "&countrycodes=jp" +
+            "&accept-language=ja";
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("検索に失敗しました");
+        }
+
+        const results = await response.json();
+
+        resultsArea.innerHTML = "";
+
+        if (results.length === 0) {
+            resultsArea.innerHTML =
+                "検索結果が見つかりませんでした。";
+            return;
+        }
+
+        results.forEach(result => {
+
+            const div = document.createElement("div");
+
+            div.className = "place-result";
+
+            div.innerHTML = `
+                <div class="place-result-name">
+                    📍 ${result.name || "名称なし"}
+                </div>
+
+                <div class="place-result-address">
+                    ${result.display_name}
+                </div>
+            `;
+
+            div.onclick = function() {
+                selectPlace(result);
+            };
+
+            resultsArea.appendChild(div);
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        resultsArea.innerHTML =
+            "検索中にエラーが発生しました。";
+    }
+}
+
+
+function selectPlace(result) {
+
+    // DBに送る値
+    document.getElementById("place").value =
+        result.display_name;
+
+    document.getElementById("latitude").value =
+        result.lat;
+
+    document.getElementById("longitude").value =
+        result.lon;
+
+
+    // 画面に選択した場所を表示
+    const selected =
+        document.getElementById("selectedPlace");
+
+    selected.innerHTML = `
+        📍 選択した場所<br>
+        <strong>${result.display_name}</strong>
+    `;
+
+    selected.style.display = "block";
+
+
+    // 検索結果を消す
+    document.getElementById("placeResults").innerHTML = "";
+}
+
+
+
+
+</script>
+
+</body>
+</html>

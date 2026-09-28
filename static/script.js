@@ -110,21 +110,168 @@ if (imageInput) {
 
 }
 
+
+// ========================================
+// 音声ファイル
+// ========================================
+
+const soundFiles = [
+    "/static/pajama.mp3",
+    "/static/harukana.mp3"
+];
+
+
+// ========================================
+// サイトに入ったときにランダム選択
+// ========================================
+
+const selectedSound =
+    soundFiles[Math.floor(Math.random() * soundFiles.length)];
+
+
+// ========================================
+// 音声設定
+// ========================================
+
+let soundEnabled = false;
+
+// Web Audio API
+let audioContext = null;
+
+// 読み込んだ音声データ
+let audioBuffer = null;
+
+
+// ========================================
+// 音声を読み込む
+// ========================================
+
+async function loadSound() {
+
+    // AudioContextを作成
+    if (!audioContext) {
+
+        audioContext =
+            new (window.AudioContext ||
+                 window.webkitAudioContext)();
+
+    }
+
+    // 音声ファイルを取得
+    const response =
+        await fetch(selectedSound);
+
+    // ArrayBufferに変換
+    const arrayBuffer =
+        await response.arrayBuffer();
+
+    // 音声データとしてデコード
+    audioBuffer =
+        await audioContext.decodeAudioData(arrayBuffer);
+}
+
+
+// ========================================
+// 音声 ON / OFF
+// ========================================
+
+async function toggleSound() {
+
+    soundEnabled = !soundEnabled;
+
+    const button =
+        document.getElementById("soundButton");
+
+
+    if (soundEnabled) {
+
+        button.innerText = "音声 ON!!";
+        button.classList.add("sound-on");
+
+
+        // 初回だけ音声を読み込む
+        if (!audioBuffer) {
+
+            await loadSound();
+
+        }
+
+
+        // iPhoneなどでAudioContextが停止していた場合
+        if (audioContext.state === "suspended") {
+
+            await audioContext.resume();
+
+        }
+
+
+    } else {
+
+        button.innerText = "音声 OFF";
+        button.classList.remove("sound-on");
+
+    }
+
+}
+
+
+// ========================================
+// 音声を再生
+// ========================================
+
+function playSound() {
+
+    if (!soundEnabled) {
+        return;
+    }
+
+    if (!audioContext || !audioBuffer) {
+        return;
+    }
+
+
+    // 音声再生用のノードを毎回作る
+    const source =
+        audioContext.createBufferSource();
+
+    source.buffer = audioBuffer;
+
+    source.connect(audioContext.destination);
+
+
+    // 再生
+    source.start();
+
+}
+
+
+// ========================================
+// なでなでボタン
+// ========================================
+
 function countClick() {
+
+    // ====================================
+    // カウント
+    // ====================================
 
     fetch("/count")
     .then(response => response.text())
     .then(data => {
 
         document
-        .getElementById("countNumber")
-        .innerText = data;
+            .getElementById("countNumber")
+            .innerText = data;
 
     });
 
-    // 画像跳ねる
+
+    // ====================================
+    // 画像を跳ねさせる
+    // ====================================
+
     let img =
-    document.getElementById("bounceImage");
+        document.getElementById("bounceImage");
 
     if (img) {
 
@@ -136,28 +283,18 @@ function countClick() {
 
     }
 
-    // 💬 吹き出し表示
-    let bubble =
-    document.getElementById("speechBubble");
 
-    if (bubble) {
+    // ====================================
+    // 音声
+    // ====================================
 
-        bubble.classList.remove("showBubble");
-
-        void bubble.offsetWidth;
-
-        bubble.classList.add("showBubble");
-
-        // 2秒後に消える
-        setTimeout(function() {
-
-            bubble.classList.remove("showBubble");
-
-        }, 2000);
-
-    }
+    playSound();
 
 }
+
+
+
+
 
 // ページ読み込み時
 window.addEventListener("load", function () {

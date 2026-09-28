@@ -198,6 +198,56 @@ def page_not_found(e):
 
 
 
+
+
+# =========================
+# 地図投稿用データベース
+# =========================
+
+def init_map_db():
+    conn = sqlite3.connect("map.db")
+    c = conn.cursor()
+
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS posts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+            image_filename TEXT,
+
+            place TEXT,
+            latitude REAL,
+            longitude REAL,
+
+            character TEXT,
+            condition TEXT,
+            number INTEGER,
+
+            comment TEXT,
+
+            status TEXT DEFAULT 'pending',
+
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+init_map_db()
+
+@app.route("/map_upload")
+def map_upload():
+    return render_template("map_upload.html")
+
+
+
+
+
+
+
+
+
 # 🔥 必ず最後！！
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
